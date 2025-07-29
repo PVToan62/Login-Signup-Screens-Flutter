@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "269759861017",
+    "project_id": "login-signup-ab386",
+    "storage_bucket": "login-signup-ab386.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269759861017:android:a8033b296f0f9f5becb588",
+        "android_client_info": {
+          "package_name": "com.example.login_signup_screens"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqFVQOZL02wqtKdQvEHSj7to5HjDORDZk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
