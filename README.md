@@ -15,4 +15,4 @@ A **Flutter** project demonstrating fully functional **Login** and **Signup** sc
 ## 📱 Screenshots
 | Login Screen | Signup Screen | OTP Verification |
 | ------------ | ------------- | ---------------- |
-|![Image](https://github.com/user-attachments/assets/ba268a60-0780-4a72-89eb-ff115aa7aad5)||
+|![Image](https://github.com/user-attachments/assets/ba268a60-0780-4a72-89eb-ff115aa7aad5)|![Image](https://github.com/user-attachments/assets/79128a37-e10c-4dd7-99db-26400dd0d79a)|
