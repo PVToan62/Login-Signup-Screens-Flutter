@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
+import '../components/form_button.dart';
 import '../components/form_sizebox.dart';
 import '../components/form_text_field.dart';
 import '../services/auth/AuthService.dart';
@@ -44,21 +44,12 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                 validFunc: _validEmail,
                 errorText: "Invalid email",
               ),
-              Container(
-                width: double.infinity,
-                child: FloatingActionButton(
-                  onPressed: _validEmail(_emailController.text)
-                      ? () {
-                          AuthService().resetPassword(_emailController.text, context);
-                        }
-                      : null,
-                  backgroundColor:
-                      _validEmail(_emailController.text)
-                      ? Colors.blue
-                      : Colors.grey,
-                  foregroundColor: Colors.white,
-                  child: Text("Reset password", style: TextStyle(fontSize: 20)),
-                ),
+              FormButton(
+                text: "Reset password",
+                isEnabled: () => _validEmail(_emailController.text),
+                onPressed: () {
+                  AuthService().resetPassword(_emailController.text, context);
+                },
               ),
             ],
           ),

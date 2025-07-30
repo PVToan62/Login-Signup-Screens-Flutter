@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
+import '../components/form_button.dart';
 import '../components/form_sizebox.dart';
 import '../components/form_text_field.dart';
 import '../services/auth/AuthService.dart';
@@ -126,27 +127,16 @@ class _SignupPageState extends State<SignupPage> {
                       validFunc: _validConfirmPassword,
                       errorText: "Passwords do not match",
                     ),
-                    Container(
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: FloatingActionButton(
-                        onPressed: _validForm()
-                            ? () {
-                                authService.signUpWithEmailPassword(
-                                  _emailController.text.trim(),
-                                  _passwordController.text.trim(),
-                                  context,
-                                );
-                              }
-                            : null,
-                        backgroundColor: _validForm()
-                            ? Colors.blue
-                            : Colors.grey,
-                        foregroundColor: Colors.white,
-                        child: Text("Sign up", style: TextStyle(fontSize: 20)),
-                      ),
+                    FormButton(
+                      text: "Sign up",
+                      isEnabled: _validForm,
+                      onPressed: () {
+                        authService.signUpWithEmailPassword(
+                          _emailController.text.trim(),
+                          _passwordController.text.trim(),
+                          context,
+                        );
+                      },
                     ),
                   ],
                 ),

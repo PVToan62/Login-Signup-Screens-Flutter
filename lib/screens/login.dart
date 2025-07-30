@@ -4,6 +4,7 @@ import 'package:login_signup_screens/components/toast.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../components/form_button.dart';
 import '../components/form_sizebox.dart';
 import '../components/form_text_field.dart';
 import '../services/auth/AuthService.dart';
@@ -68,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
           );
         })
         .catchError((e) {
-          showToast(message: "Invalid email or password");
+          showToast(message: "Email or password is incorrect");
         });
   }
 
@@ -156,21 +157,9 @@ class _LoginPageState extends State<LoginPage> {
                         ],
                       ),
                     ),
-                    Container(
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: FloatingActionButton(
-                        onPressed: _validForm()
-                            ? _handleEmailPasswordLogin
-                            : null,
-                        backgroundColor: _validForm()
-                            ? Colors.blue
-                            : Colors.grey,
-                        foregroundColor: Colors.white,
-                        child: Text("Log in", style: TextStyle(fontSize: 20)),
-                      ),
+                    FormButton(text: "Log in",
+                      isEnabled: _validForm,
+                      onPressed: _handleEmailPasswordLogin,
                     ),
                   ],
                 ),

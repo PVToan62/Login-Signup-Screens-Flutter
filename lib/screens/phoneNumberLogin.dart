@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../components/form_button.dart';
 import '../components/form_sizebox.dart';
 import '../services/auth/AuthService.dart';
 
@@ -66,22 +67,11 @@ class _PhoneNumberLoginPageState extends State<PhoneNumberLoginPage> {
                 validFunc: _validPhoneNumber,
                 errorText: "Invalid phone number",
               ),
-              Container(
-                width: double.infinity,
-                child: FloatingActionButton(
-                  onPressed: _validPhoneNumber(_phoneNumberController.text)
-                      ? () => AuthService().signInWithPhoneNumber(
-                          formattedPhone,
-                          context,
-                        )
-                      : null,
-                  backgroundColor:
-                      _validPhoneNumber(_phoneNumberController.text)
-                      ? Colors.blue
-                      : Colors.grey,
-                  foregroundColor: Colors.white,
-                  child: Text("Send OTP", style: TextStyle(fontSize: 20)),
-                ),
+              FormButton(text: "Send OTP",
+                isEnabled: () => _validPhoneNumber(_phoneNumberController.text),
+                onPressed: () {
+                  AuthService().signInWithPhoneNumber(formattedPhone, context);
+                },
               ),
             ],
           ),
