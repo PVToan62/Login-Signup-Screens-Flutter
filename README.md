@@ -1,16 +1,18 @@
-# login_signup_screens
+# Login & Signup Screens - Flutter App
 
-A new Flutter project.
+A **Flutter** project demonstrating fully functional **Login** and **Signup** screens with **Firebase Authentication** integration. This project showcases how to implement email/password login, Google Sign-In, phone number verification (OTP), and secure session management using **Flutter**, **FirebaseAuth**, and **SharedPreferences**.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+- **Email/Password Authentication** with validation
+- **Google Sign-In Integration**
+- **Phone Number OTP Verification** (Firebase Phone Auth)
+- **Persistent Login Sessions** using SharedPreferences
+- **Custom Loading Indicators & Page Transitions**
+- **Play Integrity API** & **reCAPTCHA** for enhanced security
+- **Error Handling & User Feedback**
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📱 Screenshots
+| Login Screen | Signup Screen | OTP Verification |
+| ------------ | ------------- | ---------------- |
+|![Image](https://github.com/user-attachments/assets/ba268a60-0780-4a72-89eb-ff115aa7aad5)||
