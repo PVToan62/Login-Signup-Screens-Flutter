@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../components/toast.dart';
+import '../widgets/toast.dart';
 import 'home.dart';
 
 class OTPVerifyPage extends StatefulWidget {

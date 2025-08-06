@@ -4,7 +4,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../components/toast.dart';
+import '../../widgets/toast.dart';
 import '../../screens/OTPVerify.dart';
 import '../../screens/home.dart';
 import '../../screens/login.dart';

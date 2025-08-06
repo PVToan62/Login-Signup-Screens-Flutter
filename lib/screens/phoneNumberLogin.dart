@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../components/form_button.dart';
-import '../components/form_sizebox.dart';
+import '../widgets/form_button.dart';
+import '../widgets/form_sizebox.dart';
 import '../services/auth/AuthService.dart';
 
 class PhoneNumberLoginPage extends StatefulWidget {

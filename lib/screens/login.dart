@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:login_signup_screens/components/toast.dart';
+import 'package:login_signup_screens/widgets/toast.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../components/form_button.dart';
-import '../components/form_sizebox.dart';
-import '../components/form_text_field.dart';
+import '../widgets/form_button.dart';
+import '../widgets/form_sizebox.dart';
+import '../widgets/form_text_field.dart';
 import '../services/auth/AuthService.dart';
 import 'forgotPassword.dart';
 import 'home.dart';
